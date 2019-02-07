@@ -1,4 +1,4 @@
-const GAME_SPEED = 100;
+const GAME_SPEED = 150;
     const CANVAS_BORDER_COLOR = 'black';
     const CANVAS_BACKGROUND_COLOR = "white";
     const SNAKE_COLOR = 'lightgreen';
@@ -108,9 +108,9 @@ const GAME_SPEED = 100;
       }
       const hitLeftWall = snake[0].x < 0;
       const hitRightWall = snake[0].x > gameCanvas.width - 10;
-      const hitToptWall = snake[0].y < 0;
-      const hitBottomWall = snake[0].y > gameCanvas.height - 10;
-      return hitLeftWall || hitRightWall || hitToptWall || hitBottomWall
+      const hitBottomWall = snake[0].y < 0;
+      const hitTopWall = snake[0].y > gameCanvas.height - 10;
+      return hitLeftWall || hitRightWall || hitTopWall || hitBottomWall
     }
     /**
      * Generates a random number that is a multiple of 10 given a minumum
